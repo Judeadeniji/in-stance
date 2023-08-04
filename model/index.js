@@ -1,13 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const { noop } = require('../utils');
-const { databases, getDB } = require("../database.js");
+const { databases, noop, ModelMap, config } = require('../utils');
 
-const ModelMap = new Map()
 
 class Model {
   constructor(key, schemaInstance) {
-    const database = databases.get(getDB());
+    const database = databases.get(config.currentDB);
     ModelMap.set(key, schemaInstance);
     this.key = key;
     this.database = database;
@@ -38,7 +36,4 @@ class Model {
   }
 }
 
-module.exports = {
-  Model,
-  ModelMap
-}
+module.exports = Model

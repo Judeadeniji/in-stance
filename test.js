@@ -1,8 +1,6 @@
-const { createDB } = require("./database");
-const { Model } = require("./model");
-const Schema = require("./schema");
+const { createDatabase, Model, Schema } = require("./main");
 
-createDB("testing")
+createDatabase("testing")
 
 const ContactSchema = new Schema(
   {
