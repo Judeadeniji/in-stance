@@ -14,7 +14,8 @@ class Database {
     const schemaInstance = this.schema.get(key);
     // Pre validation check
     for (const field in data) {
-      //console.log(field);
+      //TODO: Implement this
+      break
     }
     const validationResult = schemaInstance.validateData(data, schemaInstance);
     return validationResult;

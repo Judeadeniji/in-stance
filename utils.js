@@ -58,7 +58,9 @@ function parseLine(line, inMultiLineComment) {
 
 function parseConfig(config) {
   var lines = config.split('\n');
-  var jsObject = {};
+  var jsObject = {
+    credentials: {}
+  };
 
   lines.forEach(function(line) {
     var parsedLine = parseLine(line);
@@ -67,7 +69,13 @@ function parseConfig(config) {
       if (!parts[1]) return;
       var key = parts[0].trim();
       var value = parts[1].trim();
+      
 
+      if (key === "user" || key === "password") {
+        jsObject.credentials[key] = isNaN(value) ? value : Number(value);
+        return;
+      }
+      
       jsObject[key] = isNaN(value) ? value : Number(value);
     }
   });
