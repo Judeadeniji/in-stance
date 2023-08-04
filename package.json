@@ -1,0 +1,33 @@
+{
+  "name": "in-stance",
+  "version": "0.0.1",
+  "description": "A simple self hosted server less file based database for JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Judeadeniji/in-stance.git"
+  },
+  "keywords": [
+    "db",
+    "database",
+    "JavaScript",
+    "serverless",
+    "self",
+    "hosted",
+    "Frontend",
+    "backend",
+    "instance"
+  ],
+  "author": "Adeniji Oluwaferanmi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Judeadeniji/in-stance/issues"
+  },
+  "homepage": "https://github.com/Judeadeniji/in-stance#readme",
+  "dependencies": {
+    "sql-parser": "^0.5.0"
+  }
+}
